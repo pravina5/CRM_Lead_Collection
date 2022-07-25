@@ -15,6 +15,13 @@ class DatabaseMethods {
   addLead(leadData) async{
         FirebaseFirestore.instance.collection("leads").add(leadData).catchError((e){print(e.toString());});
   }
+
+  getuserLeads(uid)  async{
+    return await  FirebaseFirestore.instance.collection("leads").where('uid' ,isEqualTo: uid).get().catchError((e) {
+      print(e.toString());
+    });
+
+  }
   searchByName(String searchField) async {
     return await FirebaseFirestore.instance.collection("users").where('name', isEqualTo: searchField).get();
   }

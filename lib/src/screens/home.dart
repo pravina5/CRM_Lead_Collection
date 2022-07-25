@@ -1,6 +1,7 @@
 import 'package:crm_project/src/helper/authenticate.dart';
 import 'package:crm_project/src/helper/helperfunctions.dart';
 import 'package:crm_project/src/screens/add_lead.dart';
+import 'package:crm_project/src/screens/view_leads.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:crm_project/src/screens/login.dart';
@@ -47,7 +48,9 @@ class Home extends StatelessWidget {
               Text("Add contacts"),
               SizedBox(height:20,),
               ElevatedButton(
-  onPressed: () {},
+  onPressed: () {
+Navigator.push(context,  MaterialPageRoute(builder: (context) => ViewLead()));
+  },
   child: Icon(Icons.contact_page, color: Colors.white,size: 80,),
   style: ElevatedButton.styleFrom(
     shape: CircleBorder(),
