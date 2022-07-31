@@ -32,7 +32,9 @@ git clone https://github.com/pravina5/CRM_Lead_Collection.git
 
 In the project directory, you can run:
 
+
 > flutter pub get 
+
 
 > flutter run -d chrome/device_name
 
@@ -42,9 +44,12 @@ Note: If there aren’t any other connected devices, the -d chrome is optional.
  
 
 ### Build
+
 Run the following command to generate a release build:
 
+
 > flutter build web
+
 
 A release build uses https://dart.dev/tools/dart2js (instead of the development compiler) to produce a single JavaScript file main.dart.js. You can create a release build using release mode (flutter run --release) or by using flutter build web. This populates a build/web directory with built files, including an assets directory, which need to be served together.
 
@@ -60,7 +65,8 @@ For more information, see Build and release a web app (https://docs.flutter.dev/
 
 To add web support to an existing project created using a previous version of Flutter, run the following command from your project’s directory:
 
- flutter create 
+
+> flutter create 
 
 
 
