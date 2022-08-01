@@ -1,5 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.crm_project">
+     <queries>
+    <intent>
+      <action android:name="android.intent.action.SEND" />
+      <data android:mimeType="*/*" />
+      </intent>
+      <intent>
+    <action android:name="android.intent.action.DIAL" />
+    <data android:scheme="tel" />
+  </intent>
+  </queries>
    <application
         android:label="crm_project"
         android:name="${applicationName}"
