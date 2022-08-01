@@ -21,20 +21,21 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   //late String _email="", _pass="";
-    AuthMethods authMethods = new AuthMethods();
-TextEditingController emailTextEdit = new TextEditingController();
+  AuthMethods authMethods = new AuthMethods();
+  TextEditingController emailTextEdit = new TextEditingController();
   TextEditingController passwordTextEdit = new TextEditingController();
   @override
- 
- Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/images/login.jpeg'), 
-              fit: BoxFit.cover,),),
+        image: DecorationImage(
+          image: AssetImage('assets/images/login.jpeg'),
+          fit: BoxFit.cover,
+        ),
+      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-       body: Stack(
+        body: Stack(
           children: [
             Container(
               padding: EdgeInsets.only(left: 35, top: 90),
@@ -54,35 +55,30 @@ TextEditingController emailTextEdit = new TextEditingController();
                     left: 35),
                 child: Column(
                   children: [
-        TextField(
-          controller: emailTextEdit,
-
-              keyboardType: TextInputType.emailAddress,
+                    TextField(
+                      controller: emailTextEdit,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         filled: true,
                         hintText: 'Email',
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                      ),),
-
-              /*onChanged:(value){
-                setState(() {
-                  _pass=value.trim();
-                });
-              },*/
-                SizedBox(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
                       height: 30,
                     ),
                     TextField(
                       obscureText: true,
-                       controller: passwordTextEdit,
+                      controller: passwordTextEdit,
                       decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         filled: true,
                         hintText: 'Password',
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(10),),
                       ),
                     ),
                     SizedBox(
@@ -96,7 +92,7 @@ TextEditingController emailTextEdit = new TextEditingController();
                           style: TextStyle(
                               color: Color(0xff4c505b),
                               fontSize: 27,
-                              fontWeight: FontWeight.w700),
+                              fontWeight: FontWeight.w700,),
                         ),
                         CircleAvatar(
                           radius: 30,
@@ -104,16 +100,19 @@ TextEditingController emailTextEdit = new TextEditingController();
                           child: IconButton(
                             color: Colors.white,
                             onPressed: () async {
-                     await authMethods.signInWithEmailAndPassword( emailTextEdit.text,passwordTextEdit.text).then((val) async {
-        if (val != null) {
-            print(val);
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
-                                         HelperFunctions.saveUserLoggedInSharedPreference(true);
-              HelperFunctions.saveUserIDSharedPreference(val.uid);
-            }
-                     });
-                    },
-                            
+                              await authMethods.signInWithEmailAndPassword(emailTextEdit.text, passwordTextEdit.text).then((val) async {
+                                if (val != null) {
+                                  print(val);
+                                  Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Home()));
+                                  HelperFunctions.saveUserLoggedInSharedPreference(true);
+                                  HelperFunctions.saveUserIDSharedPreference(val.uid);
+                                }
+                              }
+                              );
+                            },
                             icon: Icon(Icons.arrow_forward),
                           ),
                         ),
@@ -127,8 +126,7 @@ TextEditingController emailTextEdit = new TextEditingController();
                       children: [
                         TextButton(
                           onPressed: () {
-                                                              widget.toggleView();
-
+                            widget.toggleView();
                           },
                           child: Text(
                             'Sign Up',
@@ -160,5 +158,5 @@ TextEditingController emailTextEdit = new TextEditingController();
         ),
       ),
     );
-         }
+  }
 }
