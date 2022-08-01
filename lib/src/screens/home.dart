@@ -10,60 +10,72 @@ class Home extends StatelessWidget {
   final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(  
+    return Scaffold(
       appBar: AppBar(
-        title:const Text("Home"),
+        title: const Text("Home"),
         //title: const Text('AppBar Demo'),
         actions: <Widget>[
-          TextButton(
-            onPressed: (){
-        HelperFunctions.saveUserLoggedInSharedPreference(false);
-        auth.signOut();
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Authenticate()));
+          IconButton(
+            onPressed: () {
+              HelperFunctions.saveUserLoggedInSharedPreference(false);
+              auth.signOut();
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Authenticate()));
             },
-            child: Text("Sign out") ,
+            icon: Icon(Icons.logout),
           ),
-          ],
-
+        ],
       ),
-      body:Center(
+      body: Center(
         child: Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-        
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               onPressed: () {
-                    Navigator.push(context,  MaterialPageRoute(builder: (context) => AddLead()));
-
-                      },
-  child: Icon(Icons.person_add, color: Colors.white,size: 80,),
-  style: ElevatedButton.styleFrom(
-    shape: CircleBorder(),
-    padding: EdgeInsets.all(35),
-    primary: Color(0xff4c505b), // <-- Button color
-  ),
-),
-              
-                           SizedBox(height:10,),
-              Text("Add contacts"),
-              SizedBox(height:20,),
-              ElevatedButton(
-  onPressed: () {
-Navigator.push(context,  MaterialPageRoute(builder: (context) => ViewLead()));
-  },
-  child: Icon(Icons.contact_page, color: Colors.white,size: 80,),
-  style: ElevatedButton.styleFrom(
-    shape: CircleBorder(),
-    padding: EdgeInsets.all(35),
-    primary: Color(0xff4c505b), // <-- Button color
-  ),
-),
-              
-                    SizedBox(height:10,),
-              Text("View contacts"),
-                    
-        ],),
-      )
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AddLead()));
+              },
+              child: Icon(
+                Icons.person_add,
+                color: Colors.white,
+                size: 80,
+              ),
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(35),
+                primary: Color(0xff4c505b), // <-- Button color
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text("Add contacts"),
+            SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ViewLead()));
+              },
+              child: Icon(
+                Icons.contact_page,
+                color: Colors.white,
+                size: 80,
+              ),
+              style: ElevatedButton.styleFrom(
+                shape: CircleBorder(),
+                padding: EdgeInsets.all(35),
+                primary: Color(0xff4c505b), // <-- Button color
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text("View contacts"),
+          ],
+        ),
+      ),
     );
   }
 }

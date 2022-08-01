@@ -50,9 +50,10 @@ class _LoginState extends State<Login> {
             SingleChildScrollView(
               child: Container(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5,
-                    right: 35,
-                    left: 35),
+                  top: MediaQuery.of(context).size.height * 0.5,
+                  right: 35,
+                  left: 35,
+                ),
                 child: Column(
                   children: [
                     TextField(
@@ -78,7 +79,8 @@ class _LoginState extends State<Login> {
                         filled: true,
                         hintText: 'Password',
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -90,9 +92,10 @@ class _LoginState extends State<Login> {
                         Text(
                           'Sign In',
                           style: TextStyle(
-                              color: Color(0xff4c505b),
-                              fontSize: 27,
-                              fontWeight: FontWeight.w700,),
+                            color: Color(0xff4c505b),
+                            fontSize: 27,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                         CircleAvatar(
                           radius: 30,
@@ -100,18 +103,22 @@ class _LoginState extends State<Login> {
                           child: IconButton(
                             color: Colors.white,
                             onPressed: () async {
-                              await authMethods.signInWithEmailAndPassword(emailTextEdit.text, passwordTextEdit.text).then((val) async {
+                              await authMethods
+                                  .signInWithEmailAndPassword(
+                                      emailTextEdit.text, passwordTextEdit.text)
+                                  .then((val) async {
                                 if (val != null) {
                                   print(val);
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => Home()));
-                                  HelperFunctions.saveUserLoggedInSharedPreference(true);
-                                  HelperFunctions.saveUserIDSharedPreference(val.uid);
+                                  HelperFunctions
+                                      .saveUserLoggedInSharedPreference(true);
+                                  HelperFunctions.saveUserIDSharedPreference(
+                                      val.uid);
                                 }
-                              }
-                              );
+                              });
                             },
                             icon: Icon(Icons.arrow_forward),
                           ),

@@ -17,7 +17,7 @@ class LeadCard extends StatelessWidget {
        
       child: GestureDetector(
         onTap: (){
-          Navigator.push(context,MaterialPageRoute(builder: (context) =>LeadInfo(lead: lead,)));
+          Navigator.push(context,MaterialPageRoute(builder: (context) =>LeadInfo(lead: lead)));
         },
         child: Card(
           child: Padding(
