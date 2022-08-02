@@ -137,7 +137,10 @@ class _SignupState extends State<Signup> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("Already have an account?  "),
+                          const Text("Already have an account?  ",
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),),
                           GestureDetector(
                             onTap: () {
                               widget.toggleView();
@@ -147,7 +150,7 @@ class _SignupState extends State<Signup> {
                               child: const Text(
                                 "Login here!",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Colors.blue,
                                   fontSize: 18,
                                   decoration: TextDecoration.underline,
                                 ),
