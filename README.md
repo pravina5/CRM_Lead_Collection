@@ -32,9 +32,12 @@ git clone https://github.com/pravina5/CRM_Lead_Collection.git
 
 In the project directory, you can run:
 
-flutter pub get 
 
-flutter run -d chrome/device_name
+>flutter pub get 
+
+
+>flutter run -d chrome/device_name
+
 
 Note: If there aren’t any other connected devices, the -d chrome is optional.
 
@@ -60,7 +63,8 @@ For more information, see Build and release a web app (https://docs.flutter.dev/
 
 To add web support to an existing project created using a previous version of Flutter, run the following command from your project’s directory:
 
- flutter create 
+
+ > flutter create 
 
 
 
