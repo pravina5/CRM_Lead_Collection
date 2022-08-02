@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
               Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (context) => Authenticate()));
             },
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
           ),
         ],
       ),
@@ -33,46 +33,46 @@ class Home extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AddLead()));
+                    MaterialPageRoute(builder: (context) => const AddLead()));
               },
-              child: Icon(
+              style: ElevatedButton.styleFrom(
+                shape: const CircleBorder(),
+                padding: const EdgeInsets.all(35),
+                primary: const Color(0xff4c505b), // <-- Button color
+              ),
+              child: const Icon(
                 Icons.person_add,
                 color: Colors.white,
                 size: 80,
               ),
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                padding: EdgeInsets.all(35),
-                primary: Color(0xff4c505b), // <-- Button color
-              ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text("Add contacts"),
-            SizedBox(
+            const Text("Add contacts"),
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ViewLead()));
+                    MaterialPageRoute(builder: (context) => const ViewLead()));
               },
-              child: Icon(
+              style: ElevatedButton.styleFrom(
+                shape: const CircleBorder(),
+                padding: const EdgeInsets.all(35),
+                primary: const Color(0xff4c505b), // <-- Button color
+              ),
+              child: const Icon(
                 Icons.contact_page,
                 color: Colors.white,
                 size: 80,
               ),
-              style: ElevatedButton.styleFrom(
-                shape: CircleBorder(),
-                padding: EdgeInsets.all(35),
-                primary: Color(0xff4c505b), // <-- Button color
-              ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Text("View contacts"),
+            const Text("View contacts"),
           ],
         ),
       ),

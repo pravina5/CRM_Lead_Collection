@@ -21,13 +21,13 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   //late String _email="", _pass="";
-  AuthMethods authMethods = new AuthMethods();
-  TextEditingController emailTextEdit = new TextEditingController();
-  TextEditingController passwordTextEdit = new TextEditingController();
+  AuthMethods authMethods = AuthMethods();
+  TextEditingController emailTextEdit = TextEditingController();
+  TextEditingController passwordTextEdit = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/signup.png'),
           fit: BoxFit.cover,
@@ -38,7 +38,7 @@ class _LoginState extends State<Login> {
         body: Stack(
           children: [
             Container(
-              padding: EdgeInsets.only(left: 35, top: 90),
+              padding: const EdgeInsets.only(left: 35, top: 90),
 
             ),
             SingleChildScrollView(
@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     TextField(
@@ -77,13 +77,13 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           'Sign In',
                           style: TextStyle(
                             color: Color(0xff4c505b),
@@ -93,7 +93,7 @@ class _LoginState extends State<Login> {
                         ),
                         CircleAvatar(
                           radius: 30,
-                          backgroundColor: Color(0xff4c505b),
+                          backgroundColor: const Color(0xff4c505b),
                           child: IconButton(
                             color: Colors.white,
                             onPressed: () async {
@@ -114,12 +114,12 @@ class _LoginState extends State<Login> {
                                 }
                               });
                             },
-                            icon: Icon(Icons.arrow_forward),
+                            icon: const Icon(Icons.arrow_forward),
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 40,
                     ),
                     Row(
@@ -129,7 +129,7 @@ class _LoginState extends State<Login> {
                           onPressed: () {
                             widget.toggleView();
                           },
-                          child: Text(
+                          child: const Text(
                             'Sign Up',
                             style: TextStyle(
                               decoration: TextDecoration.underline,
@@ -140,7 +140,7 @@ class _LoginState extends State<Login> {
                         ),
                         TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Forgot Password',
                             style: TextStyle(
                               decoration: TextDecoration.underline,

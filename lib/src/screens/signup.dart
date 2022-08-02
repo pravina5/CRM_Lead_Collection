@@ -7,9 +7,10 @@ import 'package:crm_project/src//helper/helperfunctions.dart';
 class Signup extends StatefulWidget {
   final Function toggleView;
 
-  Signup(this.toggleView);
+  const Signup(this.toggleView);
 
   @override
+  // ignore: library_private_types_in_public_api
   _SignupState createState() => _SignupState();
 }
 
@@ -17,13 +18,13 @@ class _SignupState extends State<Signup> {
 
   bool isloading = false;
 
-  AuthMethods authMethods = new AuthMethods();
-  DatabaseMethods databaseMethods = new DatabaseMethods();
+  AuthMethods authMethods = AuthMethods();
+  DatabaseMethods databaseMethods = DatabaseMethods();
 
   final formKey = GlobalKey<FormState>();
-  TextEditingController unameTextEdit = new TextEditingController();
-  TextEditingController emailTextEdit = new TextEditingController();
-  TextEditingController passwordTextEdit = new TextEditingController();
+  TextEditingController unameTextEdit = TextEditingController();
+  TextEditingController emailTextEdit = TextEditingController();
+  TextEditingController passwordTextEdit = TextEditingController();
   registerme() {
     if (formKey.currentState!.validate()) {
       setState(() {
@@ -54,20 +55,17 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(title: Text("Signup")),
+      appBar: AppBar(title: const Text("Signup")),
       body: isloading
-          ? Container(
-
-              child: Center(
-                child: CircularProgressIndicator(),
-              ),
-            )
+          ? const Center(
+            child: CircularProgressIndicator(),
+          )
           : SingleChildScrollView(
               child: Container(
                 height: MediaQuery.of(context).size.height - 50,
                 alignment: Alignment.center,
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 24),
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -82,7 +80,7 @@ class _SignupState extends State<Signup> {
                                   : null;
                             },
                             controller: unameTextEdit,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               hintText: ("username"),
                             ),
                           ),
@@ -95,7 +93,7 @@ class _SignupState extends State<Signup> {
                                     : "Enter correct email";
                               },
                               controller: emailTextEdit,
-                              decoration: InputDecoration(hintText: ("email"))),
+                              decoration: const InputDecoration(hintText: ("email"))),
                           TextFormField(
                             obscureText: true,
                             validator: (val) {
@@ -104,13 +102,13 @@ class _SignupState extends State<Signup> {
                                   : null;
                             },
                             controller: passwordTextEdit,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               hintText: ("password"),
                             ),
                           ),
                         ]),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       GestureDetector(
@@ -120,33 +118,33 @@ class _SignupState extends State<Signup> {
                         child: Container(
                           alignment: Alignment.center,
                           width: MediaQuery.of(context).size.width,
-                          padding: EdgeInsets.symmetric(vertical: 20),
+                          padding: const EdgeInsets.symmetric(vertical: 20),
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [
-                              const Color(0xff0079FA),
-                              const Color(0xff2A75BC)
+                            gradient: const LinearGradient(colors: [
+                              Color(0xff0079FA),
+                              Color(0xff2A75BC)
                             ]),
                             borderRadius: BorderRadius.circular(30),
                           ),
-                          child: Text(
+                          child: const Text(
                             "Sign Up",
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 16,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Already have an account?  "),
+                          const Text("Already have an account?  "),
                           GestureDetector(
                             onTap: () {
                               widget.toggleView();
                             },
                             child: Container(
-                              padding: EdgeInsets.symmetric(vertical: 17),
-                              child: Text(
+                              padding: const EdgeInsets.symmetric(vertical: 17),
+                              child: const Text(
                                 "Login here!",
                                 style: TextStyle(
                                   color: Colors.white,
@@ -158,7 +156,7 @@ class _SignupState extends State<Signup> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 60,
                       ),
                     ],

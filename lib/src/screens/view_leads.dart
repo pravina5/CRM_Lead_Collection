@@ -20,7 +20,7 @@ class ViewLead extends StatefulWidget {
 class _ViewLeadState extends State<ViewLead> {
   String? uid;
   List<Object> leads=[];
-  DatabaseMethods databaseMethods = new DatabaseMethods();
+  DatabaseMethods databaseMethods = DatabaseMethods();
 
 Future fetchAllContact() async {
   await HelperFunctions.getUserIDSharedPreference().then((value) {
@@ -50,7 +50,7 @@ Future fetchAllContact() async {
   Widget build(BuildContext context) {
   return  Scaffold(
     appBar: AppBar(
-      title: Text("Leads"),
+      title: const Text("Leads"),
     ),
     body: SafeArea(
       child: ListView.builder(
