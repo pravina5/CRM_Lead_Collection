@@ -14,6 +14,7 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
+
   bool isloading = false;
 
   AuthMethods authMethods = new AuthMethods();
@@ -51,10 +52,12 @@ class _SignupState extends State<Signup> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(title: Text("Signup")),
       body: isloading
           ? Container(
+
               child: Center(
                 child: CircularProgressIndicator(),
               ),

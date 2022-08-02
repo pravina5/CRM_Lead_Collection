@@ -50,7 +50,7 @@ Future fetchAllContact() async {
   Widget build(BuildContext context) {
   return  Scaffold(
     appBar: AppBar(
-      title: Text("hii"),
+      title: Text("Leads"),
     ),
     body: SafeArea(
       child: ListView.builder(

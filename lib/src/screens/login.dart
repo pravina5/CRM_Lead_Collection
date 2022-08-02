@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/login.jpeg'),
+          image: AssetImage('assets/images/signup.png'),
           fit: BoxFit.cover,
         ),
       ),
@@ -39,13 +39,7 @@ class _LoginState extends State<Login> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 35, top: 90),
-              child: Text(
-                'Welcome\nBack',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 33,
-                ),
-              ),
+
             ),
             SingleChildScrollView(
               child: Container(
