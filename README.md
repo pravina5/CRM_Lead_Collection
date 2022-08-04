@@ -22,8 +22,12 @@ The project has two modules :
 
 
 ## Demo
+![WhatsApp Image 2022-08-01 at 4 33 12 PM](https://user-images.githubusercontent.com/48323089/182871599-24ee68db-befc-469d-a922-0669176bc383.jpeg)
 
-Insert gif or link to demo
+
+
+
+> Link to demo : https://drive.google.com/file/d/1S87AdCr3yqsHMVOitpIapAI3Ue3v7nwX/view?usp=sharing
 
 
 ## Development:
