@@ -22,8 +22,8 @@ The project has two modules :
 
 
 ## Demo
-![WhatsApp Image 2022-08-01 at 4 33 12 PM](https://user-images.githubusercontent.com/48323089/182871599-24ee68db-befc-469d-a922-0669176bc383.jpeg)
 
+![WhatsApp Image 2022-08-02 at 10 35 29 PM](https://user-images.githubusercontent.com/48323089/182872101-cac4c33f-2094-487e-9449-d53d82410165.jpeg)
 
 
 
