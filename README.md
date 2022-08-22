@@ -23,8 +23,7 @@ The project has two modules :
 
 ## Demo
 
-![MicrosoftTeams-image](https://user-images.githubusercontent.com/48323089/185904752-1b9147c3-f236-4381-a2db-2923bf31d51f.png)
-
+<img width="546" alt="Screenshot 2022-08-22 at 4 23 04 PM" src="https://user-images.githubusercontent.com/48323089/185905254-eab608c9-b838-4f9d-bef2-792fa070cc5b.png">
 
 
 
