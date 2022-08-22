@@ -23,7 +23,8 @@ The project has two modules :
 
 ## Demo
 
-![WhatsApp Image 2022-08-02 at 10 35 29 PM](https://user-images.githubusercontent.com/48323089/182872101-cac4c33f-2094-487e-9449-d53d82410165.jpeg)
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/48323089/185904752-1b9147c3-f236-4381-a2db-2923bf31d51f.png)
+
 
 
 
